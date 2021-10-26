@@ -1,3 +1,16 @@
-<ul *ngFor="let todo of todos ">
-    <li>{{todo.sno}}-{{todo.title}}-{{todo.desc}}-{{todo.active}}</li>
+<!--task1 step1 here we create one array in todos.ts and we get data using *ngFor and display it using <li> tags-->
+<!--here we create new component for styling todos data (todo-item)-->
+<div *ngFor="let todo of todos ">
+    <!-- <li>{{todo.sno}}-{{todo.title}}-{{todo.desc}}-{{todo.active}}</li> -->
+    <!--here we pass component as tag and we access todos data using todo in (todo-item.html)-->
+    <app-todo-item [todo]="todo"></app-todo-item>
+</div>
+
+<!--it is same
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
 </ul>
+-->

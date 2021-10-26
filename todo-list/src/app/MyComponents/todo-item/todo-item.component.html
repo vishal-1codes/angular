@@ -1,0 +1,7 @@
+<!--here we access array using todo that can be initialize in todo-item.ts / also we use bootstrap class-->
+<div class="my-3">
+    <h3>{{todo.title}}</h3>
+    <p>{{todo.desc}}</p>
+    <!--We create event for delete todo data / here we pass todo-->
+    <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+</div>
