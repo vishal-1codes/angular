@@ -1,0 +1,21 @@
+<!--#1 when we use id then we not assign id as -- or special key or value / here we assign form name with id bform-->
+<!--#2 here add ngSubmit event for form submition-->
+<!--#3 inside ngSubmit event we pass #myform.value for get value of form-->
+<!--#4 we add ngModel in all input fileds-->
+<!--#5 we get output in console as name:input-value-->
+<form #myform="ngForm" (ngSubmit)="getValues(myform.value)">
+    <div class="form-group" >
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" ngModel name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" ngModel name="password" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
