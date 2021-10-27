@@ -1,0 +1,41 @@
+<div class="container">
+    <!--here is demo-->
+    <div>
+        <input type="text" id="username" name="username" >
+        <button type="button">Click Me</button>
+        <h3></h3>
+    </div>
+
+
+
+    <!--#1 two way databinding with ngModel directive-->
+    <!--it introduce in angular 2 / it share data from component to template vice versa / parent child communication-->
+    <!--using iterpolation we get value at similar time when user enter some value-->
+    <div>
+        <input type="text" id="username" name="username" [(ngModel)]="uname">
+        <button type="button" (click)="onClick()">Click Me</button>
+        <h1>{{uname}}</h1>
+    </div>
+
+    <!--#2 one way binding with local reference object-->
+    <!-- here we add # in input for local reference / # holds an object of type HTMLInputElment-->
+    <!--we  get h3 value also we get console output-->
+    <!--When we click on btn then we get h3 value-->
+    <div>
+        <input type="text" id="username" name="username" #u2name>
+        <button type="button" (click)="onClick2(u2name.value)">Click Me</button> 
+        <h3>{{u2name.value}}</h3>
+    </div>
+
+
+    <!--#3 viewchild with local reference 2 way binding-->
+    <div>
+        <input type="text" id="username" name="username" #u3name>
+        <button type="button" (click)="onClick3()">Click Me</button>
+        <h3>{{myu3name}}</h3>
+    </div>
+
+
+
+
+</div>
