@@ -9,6 +9,16 @@ import { SweetAlertComponent } from './sweet-alert/sweet-alert.component';
 import { LOneComponent } from './l-one/l-one.component';
 //#loader import ngxuiloader for loader
 import { NgxUiLoaderModule } from "ngx-ui-loader";
+import { AccordionComponent } from './accordion/accordion.component';
+
+//#acc here we import 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+
+//fetch data
+import {HttpClientModule} from '@angular/common/http'
+
+
 
 //#1 first import formsModule
 @NgModule({
@@ -16,14 +26,20 @@ import { NgxUiLoaderModule } from "ngx-ui-loader";
     AppComponent,
     InputSixWayComponent,
     SweetAlertComponent,
-    LOneComponent
+    LOneComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     //#loader 
-    NgxUiLoaderModule 
+    NgxUiLoaderModule,
+    //#acc here we add 
+    BrowserAnimationsModule,
+    AccordionModule.forRoot(),
+    //here add fetch
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
