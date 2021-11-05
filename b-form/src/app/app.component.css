@@ -1,0 +1,32 @@
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    background-color: aliceblue;
+    border: 1px solid lightcoral;
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%;
+}
+
+.col h2{
+    color: lightgreen;
+    font-size: 42px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.col table{
+    font-size: 30px;
+    width: 100%;
+}
+
+.col table th{
+    background-color: white;
+}
+
+.removeLink{
+    color: red;
+}

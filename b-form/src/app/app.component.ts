@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnyRecord } from 'dns';
 //#loader import ngxUiloader in file you want that file load 
 import { NgxUiLoaderService } from "ngx-ui-loader"; 
 
@@ -18,4 +19,20 @@ export class AppComponent {
       this.ngxService.stop(); //#loader stop foreground spinner of the master loader with 'default' taskId
     }, 5000);
   }
+
+ //users we use for repeatation purpose , here we told that our array receive string value with add multiple string in array 
+  users=[];
+
+  admins=[];
+
+  //in data we get all data that type in child component
+  pushUsers(data:any){
+    this.users.push(data);
+  }
+
+  pushAdmins(data:any){
+    this.admins.push(data)
+  }
+
+
 }

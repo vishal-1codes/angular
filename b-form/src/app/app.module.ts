@@ -16,7 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 //fetch data
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { POneComponent } from './p-one/p-one.component';
+import { ChildComponent } from './child/child.component'
 
 
 
@@ -27,7 +29,9 @@ import {HttpClientModule} from '@angular/common/http'
     InputSixWayComponent,
     SweetAlertComponent,
     LOneComponent,
-    AccordionComponent
+    AccordionComponent,
+    POneComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

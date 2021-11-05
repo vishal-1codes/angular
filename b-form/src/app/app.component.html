@@ -10,4 +10,46 @@
 <!-- <app-sweet-alert></app-sweet-alert> -->
 
 <!--Accordion-->
-<app-accordion></app-accordion>
+<!-- <app-accordion></app-accordion> -->
+
+<!--Q1-->
+<!-- <app-p-one></app-p-one> -->
+
+<h2>Parent</h2>
+<div class="row">
+    <div class="col parent-box">
+        <h2>User</h2>
+        <table >
+            <tr>
+                <th>User Name</th>
+                <th class="removeLink">Remove</th>
+            </tr>
+            <!--here we repeat user for that we use ngFor-->
+            <tr *ngFor="let user of users">
+                <td>{{user}}</td>
+                <td class="removeLink">Remove</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col parent-box">
+        <h2>Admin</h2>
+        <table >
+            <tr>
+                <th>User Name</th>
+                <th class="removeLink">Remove</th>
+            </tr>
+            <tr *ngFor="let user of users">
+                <td>{{user}}</td>
+                <td class="removeLink">Remove</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<h2>Child</h2>
+<hr>
+<div class="row">
+    <!--use coustem event bind , when we use custome binding we use $event-->
+    <app-child [boxColor]="'red'"  [placeholderText]="'create user'" (inputEvent)="pushUsers($event)"></app-child>
+    <app-child [boxColor]="'green'" [placeholderText]="'create admin'" ></app-child>
+</div>

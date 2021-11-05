@@ -1,0 +1,8 @@
+<!--Here we use custome property ngClass-->
+<div class="box" [ngClass]="{boxRed:boxColor=='red', boxGreen:boxColor=='green'}">
+    <!-- #myInput here we use template refence variable-->
+    <input type="text" #myInput placeholder="{{placeholderText}}">
+    <button (click)="onCreate(myInput)">Create</button>
+    <!--here we pass condition in *ngIf when count can greter then 0 then show count of user-->
+    <div class="count" *ngIf="count">Total count:<strong>{{count}}</strong> </div>
+</div>
