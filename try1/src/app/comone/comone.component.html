@@ -1,0 +1,13 @@
+<div>
+    <!--#1 using ngFor we get data from array-->
+    <ul *ngFor="let info of array1">
+        <li>{{info.name}}</li>
+        <li>{{info.email}}</li>
+    </ul>
+    <!--#2 here we get data using ngFor-->
+    <ol *ngFor="let datas of data">
+        <li>ID no- {{datas.id}}</li>
+        <li>Name -{{datas.name}}</li>
+        <li>Email -{{datas.email}}</li>
+    </ol>
+</div>
