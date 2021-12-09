@@ -5,3 +5,12 @@
    [columns]="columns"
  >
  </ngx-datatable >
+
+ <!--here we use ngFor data feachin-->
+ <div>
+   <ol *ngFor="let datas of datatwo">
+     <li>ID -{{datas.id}}</li>
+     <li>Name-{{datas.name}}</li>
+     <li>Email-{{datas.email}}</li>
+   </ol>
+ </div>

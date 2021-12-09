@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,23 @@ import { Component } from '@angular/core';
 })
 
 
-
-export class AppComponent {
+//here we add OnInit
+export class AppComponent implements OnInit{
   title = 'datatable';
   options:any={};
 data:any[] = [];
 columns: any = {};
+
+//here we addd one varibale for ngFor
+datatwo:any;
+
+//here we add contructor
+constructor(private http:HttpClient){
+this.http.get<any>('https://jsonplaceholder.typicode.com/users').subscribe(data2=>{
+  this.datatwo=data2
+  console.log(this.datatwo);
+})
+}
 
 ngOnInit(): void {
 
@@ -31,18 +43,18 @@ ngOnInit(): void {
           "phone": "9284968567",
           "company": "tcs"
        },
-       {
-           "id": "2",
-           "name": "santosh",
-           "phone": "9758663324",
-           "company": "wipro"
-       },
-       {
-         "id":"3",
-         "name":"vishal",
-         "phone":"9594774267",
-         "company":"onelife"
-       }
+      //  {
+      //      "id": "2",
+      //      "name": "santosh",
+      //      "phone": "9758663324",
+      //      "company": "wipro"
+      //  },
+      //  {
+      //    "id":"3",
+      //    "name":"vishal",
+      //    "phone":"9594774267",
+      //    "company":"onelife"
+      //  }
    ]
 }
 }
